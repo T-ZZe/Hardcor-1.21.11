@@ -1,0 +1,22 @@
+name: SkyHub
+version: '${project.version}'
+main: fr.skyhub.SkyHubPlugin
+api-version: '1.21.11'
+description: Hub dans une sphère noire (monde void) avec des mobs de téléportation.
+commands:
+  hub:
+    description: Retourner au hub
+    aliases: [lobby]
+    permission: skyhub.hub
+  l:
+    description: "/l = retour au hub. /l sp <nom> = poser un mob (admin). /l reload = recharger (admin)."
+    aliases: [skyhub]
+permissions:
+  skyhub.hub:
+    default: true
+  skyhub.build:
+    description: Casser/poser des blocs dans le hub (modos)
+    default: op
+  skyhub.admin:
+    description: Utiliser /l sp et /l reload
+    default: op
